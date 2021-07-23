@@ -58,7 +58,9 @@ train.csv only
     compliance_detail - More information on why each ticket was marked compliant or non-compliant
 ___
 
-## Evaluation
+## Model Development and Evaluation
+A random forest classifier is trained and used to predict ticket payment.
+
 Your predictions will be given as the probability that the corresponding blight ticket will be paid on time.
 
 The evaluation metric for this assignment is the Area Under the ROC Curve (AUC). 
