@@ -62,33 +62,3 @@ ___
 Your predictions will be given as the probability that the corresponding blight ticket will be paid on time.
 
 The evaluation metric for this assignment is the Area Under the ROC Curve (AUC). 
-
-Your grade will be based on the AUC score computed for your classifier. A model which with an AUROC of 0.7 passes this assignment, over 0.75 will recieve full points.
-___
-
-For this assignment, create a function that trains a model to predict blight ticket compliance in Detroit using `readonly/train.csv`. Using this model, return a series of length 61001 with the data being the probability that each corresponding ticket from `readonly/test.csv` will be paid, and the index being the ticket_id.
-
-Example:
-
-       ticket_id
-       284932    0.531842
-       285362    0.401958
-       285361    0.105928
-       285338    0.018572
-                 ...
-       376499    0.208567
-       376500    0.818759
-       369851    0.018528
-       Name: compliance, dtype: float32
-       
-### Hints
-
-* Make sure your code is working before submitting it to the autograder.
-
-* Print out your result to see whether there is anything weird (e.g., all probabilities are the same).
-
-* Generally the total runtime should be less than 10 mins. You should NOT use Neural Network related classifiers (e.g., MLPClassifier) in this question. 
-
-* Try to avoid global variables. If you have other functions besides blight_model, you should move those functions inside the scope of blight_model.
-
-* Refer to the pinned threads in Week 4's discussion forum when there is something you could not figure it out.
