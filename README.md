@@ -16,10 +16,8 @@ Note: All tickets where the violators were found not responsible are not conside
 
 **File descriptions** (Use only this data for training your model!)
 
-    readonly/train.csv - the training set (all tickets issued 2004-2011)
-    readonly/test.csv - the test set (all tickets issued 2012-2016)
-    readonly/addresses.csv & readonly/latlons.csv - mapping from ticket id to addresses, and from addresses to lat/lon coordinates. 
-     Note: misspelled addresses may be incorrectly geolocated.
+    ./train.csv - the training set 
+    ./test.csv - the test set 
 
 <br>
 
@@ -39,7 +37,7 @@ train.csv & test.csv
     disposition - Judgment and judgement type
     fine_amount - Violation fine amount, excluding fees
     admin_fee - $20 fee assigned to responsible judgments
-state_fee - $10 fee assigned to responsible judgments
+    state_fee - $10 fee assigned to responsible judgments
     late_fee - 10% fee assigned to responsible judgments
     discount_amount - discount applied, if any
     clean_up_cost - DPW clean-up or graffiti removal cost
@@ -58,12 +56,9 @@ train.csv only
      0 = Responsible, non-compliant
      1 = Responsible, compliant
     compliance_detail - More information on why each ticket was marked compliant or non-compliant
-
-
 ___
 
 ## Evaluation
-
 Your predictions will be given as the probability that the corresponding blight ticket will be paid on time.
 
 The evaluation metric for this assignment is the Area Under the ROC Curve (AUC). 
@@ -75,7 +70,7 @@ For this assignment, create a function that trains a model to predict blight tic
 
 Example:
 
-    ticket_id
+       ticket_id
        284932    0.531842
        285362    0.401958
        285361    0.105928
